@@ -32,9 +32,27 @@ namespace Prova1
 
         static void Main(string[] args)
         {
+            //Exercicio 1
             //Console.WriteLine(Maior2(1, 2));
 
+            //Exercicio 2
             //Console.WriteLine(Par1(2));
+            //Console.ReadKey();
+
+            //Exercicio 2
+
+            IMC imc = new IMC();
+
+            Console.WriteLine("Escreva seu peso:");
+            double peso = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite seu altura:");
+            double altura = double.Parse(Console.ReadLine());
+
+            double seuimc = imc.Calcular(peso, altura);
+
+            Console.WriteLine("Seu IMC é:" + seuimc);
+            Console.WriteLine("Sua classificação é:" + imc.Classificar(imc.Calcular(peso, altura)));
             Console.ReadKey();
         }
 
